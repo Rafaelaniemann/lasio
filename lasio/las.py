@@ -160,6 +160,7 @@ class LASFile(object):
         try:
             assert version in (1.2, 2, None)
         except AssertionError:
+            version = float(version)
             if version < 2:
                 version = 1.2
             else:
